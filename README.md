@@ -1,25 +1,33 @@
----install node---
-https://nodejs.org/en/download/package-manager/
+Applicationi gives basic understading of implimentation and usage stataD library .
 
---- install redis server---
-apt-get install redis-server
-
---- install node packages ---
-npm install statsd-client
-npm install node-statsd
-npm install redis
+Application reads statastics from the client , 
+updates the redis with particular statastics and sends the information to statasD server .  
 
 
---- Run statsd client ---
-node myStatsdClient.js
 
-Client send increment of a counter to server periodically .
+---install node---  
+https://nodejs.org/en/download/package-manager/  
 
---- Run program ---
-node myStatsdServer.js
 
-Program creats a upd server and accepts increments of counters from the client.
-Updates the value in redis and send the message to actual statsd server with a udp client.
+--- install redis server---  
+apt-get install redis-server  
 
--- Run actual statud server ---
-node statsdServer/stats.js statsdServer/config.js
+--- install node packages ---  
+npm install statsd-client  
+npm install node-statsd  
+npm install redis  
+
+
+--- Run statsd client ---  
+node myStatsdClient.js  
+
+Client send increment of a counter to server periodically .  
+
+--- Run program ---  
+node myStatsdServer.js  
+
+Program creats a upd server and accepts increments of counters from the client.  
+Updates the value in redis and send the message to actual statsd server with a udp client.  
+
+-- Run actual statud server ---  
+node statsdServer/stats.js statsdServer/config.js  
